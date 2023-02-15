@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../axios';
 import requests from '../requests';
+import { useUserContext } from "../context/userContext";
 import './Banner.css';
 
 function Banner() {
   const [movie, setMovie] = useState([]);
-
+  const { user, logoutUser } = useUserContext();
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requests.fetchNetflixOriginals);
@@ -43,6 +44,7 @@ function Banner() {
           <div className='banner__buttons'>
             <button className='banner__button'>Play</button>
             <button className='banner__button'>My List </button>
+            <button onClick={logoutUser}>Log out</button>
           </div>
           {/* description */}
           <h1 className='banner__description'>
