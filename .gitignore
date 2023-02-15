@@ -1,2 +1,8 @@
 
+config2.py
+__pycache__
+.ipynb_checkpoints
+tmdb_movie_info.csv
+genres.json
 src/.DS_Store
+
