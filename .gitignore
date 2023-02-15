@@ -1,5 +1,5 @@
 config2.py
 __pycache__
 .ipynb_checkpoints
-.csv
-.json
+tmdb_movie_info.csv
+genres.json
