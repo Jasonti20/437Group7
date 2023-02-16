@@ -66,6 +66,7 @@ export const UserContextProvider = ({ children }) => {
   };
   const logoutUser = () => {
     signOut(auth);
+    window.location.reload();
   };
 
   const forgotPassword = (email) => {
