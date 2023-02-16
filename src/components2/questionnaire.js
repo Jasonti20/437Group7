@@ -63,11 +63,10 @@ const Questionnaire = () => {
       <Nav />
       <Banner />
       <Row
-        title='NETFLIX ORIGINALS'
-        fetchUrl={requests.fetchNetflixOriginals}
+        title='Popular Now' fetchUrl={requests.fetchPopular} 
         isLargeRow
       />
-      <Row title='Trending Now' fetchUrl={requests.fetchTrending} />
+      {/* <Row title='Latest Movie' fetchUrl={requests.fecthLatest} /> */}
       <Row title='Top Rated' fetchUrl={requests.fetchTopRated} />
       <Row title='Action Movies' fetchUrl={requests.fetchActionMovies} />
       <Row title='Comedy Movies' fetchUrl={requests.fetchComedyMovies} />
