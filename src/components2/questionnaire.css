@@ -3,7 +3,7 @@ body {
     background-size: 200% 200%;
     animation: verticalBreathing 15s ease infinite;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
   }
   
   @keyframes verticalBreathing {
@@ -39,6 +39,8 @@ body {
     position: relative;
     top: 5%;
     left: 50%;
+    overflow-y:auto;
+    overflow: auto; 
   }
   
   h1 {
@@ -58,6 +60,7 @@ body {
     row-gap: 30px;
     padding: 20px 40px;
     column-gap: 15px;
+    overflow-y:auto;
   }
   
   button {
