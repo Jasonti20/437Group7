@@ -79,8 +79,9 @@ export const UserContextProvider = ({ children }) => {
     signInUser,
     registerUser,
     logoutUser,
-    forgotPassword,
     signInWithGoogle,
+    forgotPassword,
+    
   };
   return (
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
