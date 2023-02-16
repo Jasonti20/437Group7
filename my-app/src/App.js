@@ -26,8 +26,10 @@ export default function App() {
   const [showScore, setShowScore] = React.useState(false);
   const [answer] = React.useState("");
 
+  var answers = [];
+
   const handleClick = (answerText) => {
-    
+    console.log(answerText);
     setScore(score + 1);
     
     
@@ -44,8 +46,11 @@ export default function App() {
     <div className="app">
       {showScore ? (
         <section className="showScore-section">
-          Your answer is {answer}
-          
+          {/* You answer is {answer} */}
+          You have answered all questions
+          <button onClick={() => handleClick()}>
+                submit
+              </button>
         </section>
       ) : (
         <>
