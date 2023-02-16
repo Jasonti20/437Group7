@@ -9,7 +9,7 @@ function Banner() {
   const { user, logoutUser } = useUserContext();
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(requests.fetchNetflixOriginals);
+      const request = await axios.get(requests.fetchPopular);
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)
@@ -35,7 +35,6 @@ function Banner() {
         }}
       >
         {/* Background image */}
-        <h6 className='by__priota'>by priota</h6>
         <div className='banner__contents'>
           <h1 className='banner__title'>
             {movie?.title || movie?.name || movie?.original_name}
