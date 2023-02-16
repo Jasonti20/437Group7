@@ -13,7 +13,9 @@ function App() {
       {error && <p className="error">{error}</p>}
       {loading ? <h2>Loading...</h2> : <> {user ? <Questionnaire /> : <Auth />} </>}
     </div>
+    
   );
 }
+
 
 export default App;
