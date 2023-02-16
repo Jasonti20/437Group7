@@ -58,7 +58,7 @@ const Questionnaire = () => {
     return(
     <div>
       { showScore ? (
-        <section className="showScore-section">
+        <section className="dashboard">
             <div className='dashboard'>
       <Nav />
       <Banner />
