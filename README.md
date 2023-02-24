@@ -73,3 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Packages to install
 
 Use the npm
+
+### Vercel Command Line instlation 
+
+sudo npm i -g vercel
