@@ -1,4 +1,28 @@
+body {
+  background: linear-gradient(-38deg, purple, teal);
+  background-size: 200% 200%;
+  animation: verticalBreathing 15s ease infinite;
+  height: 100vh;
+  overflow: auto;
+}
 
+@keyframes verticalBreathing {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 40% 40%;
+  }
+  50% {
+    background-position: 80% 80%;
+  }
+  75% {
+    background-position: 20% 60%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 .App {
   text-align: center;
 }
