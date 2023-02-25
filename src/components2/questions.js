@@ -3,11 +3,11 @@ export const questions = [
     questionText: "Pick a movie genre you'd most like to watch right now.",
     answerOptions: [
       { answerText: "Comedy", isCorrect: true },
-      { answerText: "Drama", isCorrect: true },
-      { answerText: "Thriller", isCorrect: true },
+      { answerText: "Action", isCorrect: true },
+      { answerText: "Horror", isCorrect: true },
       { answerText: "Romance", isCorrect: true },
-      { answerText: "Historical", isCorrect: true },
-      { answerText: "Science Fiction", isCorrect: true },
+      { answerText: "Documentaries", isCorrect: true },
+      { answerText: "Other", isCorrect: true },
     ],
   },
   {

@@ -40,7 +40,7 @@ body {
     top: 5%;
     left: 50%;
     overflow-y:auto;
-    overflow: auto; 
+    overflow-x: hidden; 
   }
   
   h1 {
@@ -55,12 +55,13 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     position: relative;
-    margin: 20px auto;
-    max-width: 300px;
+    margin: 10px auto;
+    max-width: 500px;
     row-gap: 30px;
-    padding: 20px 40px;
+    padding: 10px 30px;
     column-gap: 15px;
     overflow-y:auto;
+    overflow-x: hidden;
   }
   
   button {
@@ -77,14 +78,7 @@ body {
     text-align: center;
   }
   
-  .showScore-section {
-    font-size: 35px;
-    text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+
   
   @media all and (max-width: 700px) {
     .questionnaire {

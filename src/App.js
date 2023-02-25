@@ -1,13 +1,12 @@
 import Auth from "./components/auth";
-import Dashboard from "./dashboard";
 import Questionnaire from "./components2/questionnaire";
 import { useUserContext } from "./context/userContext";
+import Dashboard from "./dashboard"
 
 
 
 function App() {
   const { user, loading, error } = useUserContext();
-
   return (
     <div className="App">
       {error && <p className="error">{error}</p>}

@@ -1,4 +1,6 @@
+// import {answer} from "./components2/questionnaire";
 const API_KEY = '89e8071cdf777af6e727e4cac6f685f9';
+
 
 const requests = {
   fetchPopular: `/movie/popular?api_key=${API_KEY}&language=en-US&page=1%27`,
@@ -12,4 +14,6 @@ const requests = {
   fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
 };
 
+
 export default requests;
+

@@ -1,25 +1,7 @@
-// import Auth from "./components/auth";
-// import Dashboard from "./components/dashboard";
-// import { useUserContext } from "./context/userContext";
-
-// function App() {
-//   const { user, loading, error } = useUserContext();
-
-//   return (
-//     <div className="App">
-//       {error && <p className="error">{error}</p>}
-//       {loading ? <h2>Loading...</h2> : <> {user ? <Dashboard /> : <Auth />} </>}
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React from "react";
 import "./questionnaire.css";
 import { questions } from "./questions";
-import { BrowserRouter as Router, Switch, 
-Route, Redirect,} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Dashboard from "../dashboard";
 import { useUserContext } from "../context/userContext";
 import Row from '../components2/Row';
@@ -27,24 +9,47 @@ import requests from '../requests';
 import Banner from '../components2/Banner';
 import Nav from '../components2/Nav';
 import '../dashboard.css';
-// import { useState } from "react";
-
-
 
 const Questionnaire = () => {
 
-    const [currentQuestion, setCurrentQuestion] = React.useState(0);
-    const [score, setScore] = React.useState(0);
-    const [showScore, setShowScore] = React.useState(false);
-    const [answer] = React.useState("");
-    const { user, logoutUser } = useUserContext();
+  const [currentQuestion, setCurrentQuestion] = React.useState(0);
+  const [score, setScore] = React.useState(0);
+  const [showScore, setShowScore] = React.useState(false);
+  const [answers, setAnswer] = React.useState("");
+  const [showRow, setShowRow] = React.useState(false);
+  const [curAns, setCurAns] = React.useState("");
 
+  const { user, logoutUser } = useUserContext();
 
-    const handleClick = (answerText) => {
-    
-    setScore(score + 1);
-    
-    
+  function addAnswer(t) {
+    setAnswer(answers + "," + t);
+  }
+
+  const handleClick = (answerText) => {
+    if (currentQuestion === 0) {
+      // if answering the first question
+      if (answerText === "Comedy") {
+        setCurAns("Comedy");
+      } 
+      if (answerText === "Action") {
+        setCurAns("Action");
+      } 
+      if (answerText === "Horror") {
+        setCurAns("Horror");
+      } 
+      if (answerText === "Romance") {
+        setCurAns("Romance");
+      } 
+      if (answerText === "Documentaries") {
+        setCurAns("Documentaries");
+      } 
+      else {
+        setShowRow(false);
+      }
+    } else {
+      // if answering any question other than the first one
+      setScore(score + 1);
+    }
 
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
@@ -52,31 +57,27 @@ const Questionnaire = () => {
     } else {
       setShowScore(true);
     }
-
-  }
-
-    return(
+  };
+  return (
     <div>
-      { showScore ? (
+      {showScore ? (
         <section className="dashboard">
-            <div className='dashboard'>
-      <Nav />
-      <Banner />
-      <Row
-        title='Popular Now' fetchUrl={requests.fetchPopular} 
-        isLargeRow
-      />
-      {/* <Row title='Latest Movie' fetchUrl={requests.fecthLatest} /> */}
-      <Row title='Top Rated' fetchUrl={requests.fetchTopRated} />
-      <Row title='Action Movies' fetchUrl={requests.fetchActionMovies} />
-      <Row title='Comedy Movies' fetchUrl={requests.fetchComedyMovies} />
-      <Row title='Horror Movies' fetchUrl={requests.fetchHorrorMovies} />
-      <Row title='Romance Movies' fetchUrl={requests.fetchRomanceMovies} />
-      <Row title='Documentaries' fetchUrl={requests.fetchDocumentaries} />
-    </div>
-          
+          <div className='dashboard'>
+            <Nav />
+            <Banner />
+            <Row
+            title='Popular Now' fetchUrl={requests.fetchPopular} 
+            isLargeRow
+            />
+            <Row title='Top Rated' fetchUrl={requests.fetchTopRated} />
+            {curAns === 'Comedy' && <Row title='Suggested Comedy Movies' fetchUrl={requests.fetchComedyMovies} />}
+            {curAns === 'Action' && <Row title='Suggested Action Movies' fetchUrl={requests.fetchActionMovies} />}
+            {curAns === 'Horror' && <Row title='Suggested Horror Movies' fetchUrl={requests.fetchHorrorMovies} />} 
+            {curAns === 'Romance' && <Row title='Suggested Romance Movies' fetchUrl={requests.fetchRomanceMovies} />}  
+            {curAns === 'Documentaries' && <Row title='Suggested Documentaries Movies' fetchUrl={requests.fetchDocumentaries} />}  
+          </div>
         </section>
-      ) :(
+      ) : (
         <>
           <section className="question-section">
             <h1>
@@ -87,7 +88,7 @@ const Questionnaire = () => {
 
           <section className="answer-section">
             {questions[currentQuestion].answerOptions.map((item) => (
-              <button onClick={() => handleClick(item.isCorrect)}>
+              <button key={item.answerText} onClick={() => handleClick(item.answerText)}>
                 {item.answerText}
               </button>
             ))}
@@ -95,8 +96,7 @@ const Questionnaire = () => {
         </>
       )}
     </div>
-    );
+  );
 };
 
-export default Questionnaire;
-
+export default Questionnaire
