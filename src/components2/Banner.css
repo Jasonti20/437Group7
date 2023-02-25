@@ -17,13 +17,21 @@
   padding-bottom: 0.3rem;
 }
 
-.banner__description{
-  width: 45rem;
-  line-height: 1.3;
-  padding-top: 1rem;
-  font-size: 1.1rem;
-  max-width: 360px;
-  height: 80px;
+.banner__description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+
+  /* Media query for screens smaller than 600px */
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  /* Media query for screens smaller than 400px */
+  @media screen and (max-width: 400px) {
+    font-size: 0.8rem;
+    line-height: 1.1;
+  }
 }
 
 .banner__button{

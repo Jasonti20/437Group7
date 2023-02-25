@@ -29,7 +29,7 @@ function Banner() {
       <header
         className='banner'
         style={{
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")`,
           backdropPosition: 'center center',
         }}
@@ -41,8 +41,8 @@ function Banner() {
           </h1>
           {/* 2 buttons */}
           <div className='banner__buttons'>
-            <button className='banner__button'>Play</button>
-            <button className='banner__button'>My List </button>
+            {/* <button className='banner__button'>Play</button>
+            <button className='banner__button'>My List </button> */}
             <button onClick={logoutUser}>Log out</button>
           </div>
           {/* description */}
