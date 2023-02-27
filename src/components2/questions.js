@@ -25,6 +25,7 @@ export const questions = [
   //     { answerText: "Up", isCorrect: true },
   //     { answerText: "Toy Story 3", isCorrect: true },
   //     { answerText: "Inside Out", isCorrect: true},
+  
   //     { answerText: "Coco", isCorrect: true },
   //   ],
   // },
