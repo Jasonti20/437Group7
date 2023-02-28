@@ -33,3 +33,7 @@
   right: 20px;
   object-fit: contain;
 }
+
+img:hover {
+  cursor: pointer;
+}
