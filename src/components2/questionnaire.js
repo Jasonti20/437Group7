@@ -72,8 +72,8 @@ const Questionnaire = () => {
             {curAns === 'Romance' && <Row title='Suggested Romance Movies' fetchUrl={requests.fetchRomanceMovies} isLargeRow/>}  
             {curAns === 'Documentaries' && <Row title='Suggested Documentaries Movies' fetchUrl={requests.fetchDocumentaries} isLargeRow/>} 
 
-            <Row title='Popular Now' fetchUrl={requests.fetchPopular} isLargeRow/>     
-            <Row title='Top Rated' fetchUrl={requests.fetchTopRated} isLargeRow/>
+            <Row title='Popular Now' fetchUrl={requests.fetchPopular} />     
+            <Row title='Top Rated' fetchUrl={requests.fetchTopRated} />
           </div>
           
         </section>
