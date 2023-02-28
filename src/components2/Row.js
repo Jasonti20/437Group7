@@ -66,6 +66,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
     setTrailerUrl('');
   };
 
+
+
   return (
     <div className='row'>
       <h2>{title}</h2>
@@ -88,21 +90,19 @@ function Row({ title, fetchUrl, isLargeRow }) {
         <div className="modal-dialog modal-dialog-centered" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLongTitle">Modal title</h5>
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={handleClose}>
-                <span aria-hidden="true">&times;</span>
-              </button>
+              <h4 class="modal-title">title</h4>
             </div>
             <div className="modal-body">
               {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} ref={playerRef} />}
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={handleClose}>Close</button>
-              <button type="button" className="btn btn-primary">Save Movie</button>
+              {/*<button type="button" className="btn btn-primary">Save Movie</button>*/}
             </div>
           </div>
         </div>
       </div>
+
     </div>
   );
 

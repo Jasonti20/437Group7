@@ -37,3 +37,11 @@
   transform:scale(1.09);
 
 }
+
+img:hover {
+  cursor: pointer;
+}
+
+.modal-title {
+  color: black;
+}

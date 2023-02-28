@@ -42,12 +42,12 @@ function Banner() {
           {/* 2 buttons */}
           <div className='banner__buttons'>
             {/* <button className='banner__button'>Play</button>
-            <button className='banner__button'>My List </button> */}
-            <button onClick={logoutUser}>Log out</button>
+            <button className='banner__button'>My List </button> 
+            <button onClick={logoutUser}>Log out</button> */}
           </div>
           {/* description */}
           <h1 className='banner__description'>
-            {truncate(movie?.overview, 150)}
+            {truncate(movie?.overview, 300)}
           </h1>
         </div>
         <div className='banner_fadeBottom' />

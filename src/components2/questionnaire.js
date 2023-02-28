@@ -66,18 +66,15 @@ const Questionnaire = () => {
             <Nav />
             <Banner />
 
-            {curAns === 'Comedy' && <Row title='Suggested Comedy Movies' fetchUrl={requests.fetchComedyMovies}/>}
-            {curAns === 'Action' && <Row title='Suggested Action Movies' fetchUrl={requests.fetchActionMovies}/>}
-            {curAns === 'Horror' && <Row title='Suggested Horror Movies' fetchUrl={requests.fetchHorrorMovies}/>} 
-            {curAns === 'Romance' && <Row title='Suggested Romance Movies' fetchUrl={requests.fetchRomanceMovies}/>}  
-            {curAns === 'Documentaries' && <Row title='Suggested Documentaries Movies' fetchUrl={requests.fetchDocumentaries}/>} 
-            <Row
-            title='Popular Now' fetchUrl={requests.fetchPopular} 
-            
-            />
-                        
-            <Row title='Top Rated' fetchUrl={requests.fetchTopRated} />
-            {/* <Row title='Recommended' fetchUrl={requests.fetchRecommended} />  */}
+            {curAns === 'Comedy' && <Row title='Suggested Comedy Movies' fetchUrl={requests.fetchComedyMovies} isLargeRow/>}
+            {curAns === 'Action' && <Row title='Suggested Action Movies' fetchUrl={requests.fetchActionMovies} isLargeRow/>}
+            {curAns === 'Horror' && <Row title='Suggested Horror Movies' fetchUrl={requests.fetchHorrorMovies} isLargeRow/>} 
+            {curAns === 'Romance' && <Row title='Suggested Romance Movies' fetchUrl={requests.fetchRomanceMovies} isLargeRow/>}  
+            {curAns === 'Documentaries' && <Row title='Suggested Documentaries Movies' fetchUrl={requests.fetchDocumentaries} isLargeRow/>} 
+
+            <Row title='Popular Now' fetchUrl={requests.fetchPopular} isLargeRow/>     
+            <Row title='Top Rated' fetchUrl={requests.fetchTopRated} isLargeRow/>
+
           </div>
           
         </section>
