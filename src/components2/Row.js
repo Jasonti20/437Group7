@@ -90,7 +90,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
         <div className="modal-dialog modal-dialog-centered" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h4 class="modal-title">title</h4>
+              <h4 class="modal-title">movie.title</h4>
             </div>
             <div className="modal-body">
               {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} ref={playerRef} />}
