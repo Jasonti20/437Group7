@@ -1,5 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-
+config2.py
+genres.json
+tmdb_movie_info.csv
 .DS_Store
 /node_modules
