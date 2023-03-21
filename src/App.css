@@ -1,0 +1,144 @@
+body {
+  background: linear-gradient(-38deg, purple, teal);
+  background-size: 200% 200%;
+  animation: verticalBreathing 15s ease infinite;
+  height: 100vh;
+<<<<<<< Updated upstream
+  overflow: hidden;
+=======
+  overflow: auto;
+>>>>>>> Stashed changes
+}
+
+@keyframes verticalBreathing {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 40% 40%;
+  }
+  50% {
+    background-position: 80% 80%;
+  }
+  75% {
+    background-position: 20% 60%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+<<<<<<< Updated upstream
+
+.app {
+  text-align: center;
+  width: 450px;
+  min-height: 200px;
+  height: min-content;
+  transform: translate(-50%, 50%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  position: relative;
+  top: 5%;
+  left: 50%;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+p {
+  font-size: 30px;
+}
+
+.answer-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  position: relative;
+  margin: 20px auto;
+  max-width: 300px;
+  row-gap: 30px;
+  padding: 20px 40px;
+  column-gap: 15px;
+}
+
+button {
+  position: relative;
+  width: 150px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #2b3868;
+  border-radius: 3px;
+  padding: 5px;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.showScore-section {
+  font-size: 35px;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media all and (max-width: 700px) {
+  .app {
+    padding: 5px;
+    width: 90%;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 26px;
+  }
+  button {
+    width: 100%;
+    min-width: 60px;
+=======
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+>>>>>>> Stashed changes
+  }
+}
