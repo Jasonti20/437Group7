@@ -1,4 +1,8 @@
 import { createContext, useContext, useState, useEffect } from "react";
+<<<<<<< Updated upstream
+=======
+import 'firebase/auth';
+>>>>>>> Stashed changes
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -66,6 +70,10 @@ export const UserContextProvider = ({ children }) => {
   };
   const logoutUser = () => {
     signOut(auth);
+<<<<<<< Updated upstream
+=======
+    window.location.reload();
+>>>>>>> Stashed changes
   };
 
   const forgotPassword = (email) => {
@@ -79,8 +87,14 @@ export const UserContextProvider = ({ children }) => {
     signInUser,
     registerUser,
     logoutUser,
+<<<<<<< Updated upstream
     forgotPassword,
     signInWithGoogle,
+=======
+    signInWithGoogle,
+    forgotPassword,
+    
+>>>>>>> Stashed changes
   };
   return (
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>

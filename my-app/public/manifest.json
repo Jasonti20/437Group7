@@ -3,17 +3,29 @@
   "name": "Create React App Sample",
   "icons": [
     {
+<<<<<<< Updated upstream
       "src": "favicon.ico",
+=======
+      "src": "logo-image-background.png",
+>>>>>>> Stashed changes
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
+<<<<<<< Updated upstream
       "src": "logo192.png",
+=======
+      "src": "logo-image-background.png",
+>>>>>>> Stashed changes
       "type": "image/png",
       "sizes": "192x192"
     },
     {
+<<<<<<< Updated upstream
       "src": "logo512.png",
+=======
+      "src": "logo-image-background.png",
+>>>>>>> Stashed changes
       "type": "image/png",
       "sizes": "512x512"
     }
