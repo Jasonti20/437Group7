@@ -1,7 +1,7 @@
-import numpy as np
+#import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import os
+#import matplotlib.pyplot as plt
+#import os
 import string
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -23,7 +23,8 @@ def get_recommendations(data,title, cosine_sim,indices):
     sim_scores = sim_scores[1:20]
     movie_indices = [i[0] for i in sim_scores]
 
-    return data['title'].iloc[movie_indices]
+    return data[['id', 'title']].iloc[movie_indices]
+
 
 def run_model(movie_title):
     data = pd.read_csv('tmdb_movie_info.csv')
@@ -44,7 +45,7 @@ def run_model(movie_title):
     data = data.reset_index()
     indices = pd.Series(data.index, index=data['title'])
 
-    return get_recommendations(data,movie_title, cosine_sim2, indices)
+    return list(get_recommendations(data,movie_title, cosine_sim2, indices)['id'])
 
 def main():
     recommendations = run_model("Bullet to the Head")
